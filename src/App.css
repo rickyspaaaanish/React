@@ -1,0 +1,134 @@
+.App {
+  text-align: center;
+  background-color: #f7f9fb;
+}
+
+.App-header, .App-footer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-size: calc(10px + 2vmin);
+  justify-content: center;
+}
+
+.App-header {
+  background-color: #fff;
+  border-bottom: 1px solid #f4f4f4;
+  height: 80px;
+}
+
+.App-footer {
+  height: 215px;
+}
+
+.border-elem{
+  border: 1px solid #F4F4F4;
+  display: flex;
+  height: 80px;
+}
+
+.Navigation {
+  align-items: center;
+  display: flex;
+  height: inherit;
+  list-style: none;
+}
+
+.button {
+  align-items: stretch;
+  background-color: #fff;
+  border: 1px solid #fff;
+  color: #181818;
+  display: flex;
+  flex-direction: column;
+  font-family: "Gotham Pro";
+  font-weight: bold;
+  font-size: 12px;
+  justify-content: space-evenly;
+  height: 80px;
+  line-height: 11px;
+  padding: 15%;
+  width: 90px;
+}
+
+.navigation__item-icon{
+  font-size: 24px;
+}
+
+.logo {
+  padding: 17px 40px;
+}
+
+.search {
+  align-items: center;
+  color: #CECECE;
+  display: flex;
+  font-family: "Gotham Pro";
+  font-size: 16px;
+  justify-content: flex-start;
+  line-height: 15px;
+  left: 33px;
+  position: relative;
+  width: 367px;
+}
+
+.search-label{
+  left: 25px;
+  position: relative;
+}
+
+.profile{
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  left: 30px;
+  position: relative;
+  width: 330px;
+}
+
+.profile__info-text{
+  font-family: "Gotham Pro";
+  font-size: 12px;
+  line-height: 11px;
+}
+
+.userName{
+  font-weight: bold;
+  color: #181818;
+}
+
+.you-label{
+  color: #d1d1d1;
+  left: 10px;
+  position: relative;
+}
+
+.views-count{
+  color: #747474;
+}
+
+.difference-label{
+  font-weight: bold;
+  color: #02B033;
+  left: 5px;
+  position: relative;
+}
+
+.profile__info{
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  left: 15px;
+  position: relative;
+}
+
+.profile__info-line{
+  align-items: center;
+  display: flex;
+  height: 20px;
+}
+
+@font-face {
+  font-family: Gotham Pro;
+  src: url("fonts/GothamPro.ttf") format("truetype");
+}
