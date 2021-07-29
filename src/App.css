@@ -86,13 +86,13 @@
   width: 330px;
 }
 
-.profile__info-text{
+.text__small{
   font-family: "Gotham Pro";
   font-size: 12px;
   line-height: 11px;
 }
 
-.userName{
+.text__bold{
   font-weight: bold;
   color: #181818;
 }
@@ -109,7 +109,7 @@
 
 .difference-label{
   font-weight: bold;
-  color: #02B033;
+  color: #02b033;
   left: 5px;
   position: relative;
 }
@@ -126,6 +126,59 @@
   align-items: center;
   display: flex;
   height: 20px;
+}
+
+.footer, .footer__item{
+  display: flex;
+}
+
+.blue-text{
+  color: #0275b1;
+}
+
+.footer__navigation-controls{
+  flex-direction: column;
+}
+
+.footer__list{
+  align-items: flex-start;
+  padding: 0;
+  width: 200px;
+}
+
+.footer__item-logo{
+  width: 260px;
+}
+
+.footer__list{
+  display: flex;
+  flex-direction: column;
+  height: inherit;
+  list-style: none;
+}
+
+.footer__button{
+  align-items: center;
+  border: 1px solid #0275b1;
+  box-sizing: border-box;
+  border-radius: 4px;
+  display: flex;
+  font-family: "Gotham Pro";
+  font-weight: bold;
+  height: 32px;
+  justify-content: space-between;
+  padding: 15px;
+  width: 170px; 
+}
+
+.button__blue{
+  background: #0275b1;
+  color: #fff;
+}
+
+.button__white{
+  background: #f7f9fb;
+  color: #0275b1;
 }
 
 @font-face {
