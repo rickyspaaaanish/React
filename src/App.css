@@ -51,6 +51,16 @@
   width: 90px;
 }
 
+.button:hover{
+  border-bottom: 3px solid #0275b1;
+  color: #0275b1;
+}
+
+.button:active{
+  border-bottom: 2px solid #0275b1;
+  color: #0275b1;
+}
+
 .navigation__item-icon{
   font-size: 24px;
 }
@@ -207,6 +217,19 @@
   margin-bottom: 5px;
   padding: 15px;
   width: 170px;
+}
+
+.footer__button:active{
+  box-sizing: border-box;
+  border-width: 2px;
+}
+
+.button__blue:hover{
+  background: linear-gradient(180deg, #0077b5 0%, #0e6795 100%);
+}
+
+.button__white:hover{
+  background: linear-gradient(180deg, #f0f0f0 0%, #d1d1d1 100%);
 }
 
 .button__blue{

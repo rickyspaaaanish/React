@@ -9,7 +9,9 @@ function FooterMenuItem({ props }){
             props[1].forEach(element => {options.push(<option className='text__small text__bold'>{element.toUpperCase()}</option>)});
             return <select className='language__select text__small text__bold'>
                 {options}
-            </select>
+            </select>;
+        default:
+            return;
     }
 }
 
