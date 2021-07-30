@@ -2,7 +2,6 @@ import NavigationItem from "./NavigationItem";
 import logo from './Logo.png';
 import userpic from './Rectangle.png';
 import icomoon from './icomoon/style.css'
-import { useState } from "react";
 
 function Navigation(){
   return <ul className = "Navigation">
