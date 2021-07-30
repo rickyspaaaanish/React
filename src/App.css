@@ -22,7 +22,7 @@
 }
 
 .border-elem{
-  border: 1px solid #F4F4F4;
+  border: 1px solid #f4f4f4;
   display: flex;
   height: 80px;
 }
@@ -61,7 +61,7 @@
 
 .search {
   align-items: center;
-  color: #CECECE;
+  color: #cecece;
   display: flex;
   font-family: "Gotham Pro";
   font-size: 16px;
@@ -129,7 +129,9 @@
 }
 
 .footer, .footer__item{
+  align-items: baseline;
   display: flex;
+  height: inherit;
 }
 
 .blue-text{
@@ -140,21 +142,56 @@
   flex-direction: column;
 }
 
-.footer__list{
-  align-items: flex-start;
-  padding: 0;
-  width: 200px;
-}
-
 .footer__item-logo{
+  position: relative;
+  top: 30px;
   width: 260px;
 }
 
+.footer__logo-text{
+  position: relative;
+  left: 8px;
+}
+
+.text__middle{
+  font-family: Gotham Pro;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.footer__list-item{
+  display: flex;
+  height: 30px;
+}
+
 .footer__list{
+  align-items: flex-start;
   display: flex;
   flex-direction: column;
-  height: inherit;
+  max-height: 120px;
   list-style: none;
+  padding: 0px;
+  margin: 0px;
+  width: 200px;
+}
+
+.footer__link{
+  max-height: 20px;
+}
+
+.list__header{
+  align-items: center;
+  display: flex;
+  height: 50px;
+}
+
+.language__select{
+  border: 1px solid #f0f0f0;
+  box-sizing: border-box;
+  border-radius: 4px;
+  display: flex;
+  height: 30px;
+  width: 270px;
 }
 
 .footer__button{
@@ -167,8 +204,9 @@
   font-weight: bold;
   height: 32px;
   justify-content: space-between;
+  margin-bottom: 5px;
   padding: 15px;
-  width: 170px; 
+  width: 170px;
 }
 
 .button__blue{
