@@ -1,6 +1,5 @@
 import logo from './Logo.png';
 import FooterMenuItem from './FooterMenuItem';
-import NavigationItem from './NavigationItem';
 
 function FooterMenu() {
   return <div className='footer'><div className='footer__item-logo'><img src={logo} /><div className='text__middle text__bold footer__logo-text'>Linked<span className='blue-text'>In</span></div></div>
