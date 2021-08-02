@@ -51,14 +51,16 @@
   width: 90px;
 }
 
-.button:hover{
+.button:hover, .controls__line-button:hover{
   border-bottom: 3px solid #0275b1;
   color: #0275b1;
+  cursor: pointer;
 }
 
-.button:active{
+.button:active, .controls__line-button:active{
   border-bottom: 2px solid #0275b1;
   color: #0275b1;
+  cursor: pointer;
 }
 
 .navigation__item-icon{
@@ -100,6 +102,11 @@
   font-family: "Gotham Pro";
   font-size: 12px;
   line-height: 11px;
+}
+
+.text__xsmall{
+  font-size: 10px;
+  line-height: 15px; 
 }
 
 .text__bold{
@@ -240,6 +247,167 @@
 .button__white{
   background: #f7f9fb;
   color: #0275b1;
+}
+
+.App-main__content{
+  display: flex;
+  border-bottom: 1px solid #e7e7e7;
+  flex-direction: row;
+  font-family: 'Gotham Pro';
+  justify-content: center;
+  padding: 40px 0px;
+}
+
+.center__content-block, .side__content-block{
+  display: flex;
+  border-radius: 4px;
+  flex-direction: column;
+}
+
+.Main__content-block{
+  background: #FFFFFF;
+  border-radius: 4px;
+  display: flex;
+  margin-bottom: 20px;
+  flex-direction: column;
+  width: 850px;
+}
+
+.block__header-info{
+  align-items: center;
+  border-bottom: 1px solid #f4f4f4;
+  display: flex;
+  height: 45px;
+  justify-content: space-between;
+  padding: 0px 15px;
+}
+
+.block__user-info{
+  display: flex;
+  flex-direction: row;
+  padding: 15px 30px 0px;
+}
+
+.block__content{
+  border-bottom: 1px solid #f4f4f4;
+  padding: 15px 30px;
+  text-align: left;
+}
+
+.block__user-text-info{
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-left: 15px;
+}
+
+.expand-control{
+  align-content: flex-start;
+  color: #0275b1;
+  display: flex;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 11px;
+  width: fit-content;
+  text-transform: uppercase;
+}
+
+.expand-control:hover, .expand-control:active{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.controls__line{
+  display: flex;
+  height: 49px;
+}
+
+.controls__line-button{
+  background-color: #fff;
+  border: 1px solid #f4f4f4;
+  display: flex;
+  font-family: 'Gotham Pro';
+  height: inherit;
+  padding: 12px 30px 0px 30px;
+}
+
+.icon-thumbs-up-1, .icon-message-circle-1, .icon-share-2{
+  font-size: 18px;
+}
+
+.icon-image, .icon-film, .icon-paperclip, .icon-send-1{
+  font-size: 20px;
+}
+
+.icon-send-1{
+  background: linear-gradient(180deg, #0077b5 0%, #0e6795 100%);
+  border-radius: 4px;
+}
+
+.share-button, .type-form__buttons{
+  position: relative;
+  margin-left: auto;
+}
+
+.type-form{
+  height: 135px;
+  justify-content: space-around;
+  margin-bottom: 35px;
+  padding: 0px 30px;
+  width: inherit;
+}
+
+.type-form__header, .type-form__controls{
+  align-items: center;
+  display: flex;
+}
+
+.type-form__header{
+  border-bottom: 1px solid #f4f4f4;
+  height: 56px;
+}
+
+.type-form__controls{
+  height: 79px;
+}
+
+.text__large{
+  font-family: 'Gotham Pro';
+  font-size: 18px;
+  line-height: 17px;
+}
+
+.text__gray{
+  color: #d1d1d1;
+}
+
+.sort__selection-block{
+  display: flex
+}
+
+.sort-control{
+  border: none;
+  padding-bottom: 35px;
+  width: 186px;
+}
+
+.type-form__button{
+  background: none;
+  border: none;
+  color: #d1d1d1;
+}
+
+.border-line{
+  border-top: 1px solid #e7e7e7;
+  margin-top: 6px;
+  width: 332px;
+}
+
+.sorting-select{
+  border: none;
+  background: none;
+  width: auto;
 }
 
 @font-face {
