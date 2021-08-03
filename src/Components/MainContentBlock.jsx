@@ -39,7 +39,7 @@ function MainContentBlock({blocksInfo}) {
       for(let j = 0; j < blocksInfo[i].files.length; j++){
         content.push(<div className='content__file'><div className='file__logo icon-file-text'></div><div className='content__file-info'>
         <span className='text__middle text__bold'>{blocksInfo[i].files[j].filename}</span><span className='text__xsmall'>
-          {blocksInfo[i].files[j].filetype + ', '+ blocksInfo[i].files[j].filesize}</span></div></div>);
+          {blocksInfo[i].files[j].filetype + ', '+ blocksInfo[i].files[j].filesize}</span></div><div className='icon-download-cloud'></div></div>);
       }
     }
     blocks.push(
