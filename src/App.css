@@ -342,7 +342,15 @@
 
 .icon-send-1{
   background: linear-gradient(180deg, #0077b5 0%, #0e6795 100%);
+  border: 1px solid #0e6795;
   border-radius: 4px;
+  height: 32px;
+  width: 32px;
+}
+
+.icon-send-1:hover, .icon-send-1:active{
+  background: #0275b1;
+  cursor: pointer;
 }
 
 .share-button, .type-form__buttons{
@@ -396,6 +404,13 @@
   background: none;
   border: none;
   color: #d1d1d1;
+  height: 32px;
+  width: 32px;
+}
+
+.type-form__button:hover, .type-form__button:active{
+  color: #0275b1;
+  cursor: pointer;
 }
 
 .border-line{
