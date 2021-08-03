@@ -45,7 +45,7 @@ function MainContentBlock({blocksInfo}) {
     blocks.push(
     <><div className='Main__content-block'>
       <div className='block__header-info text__xsmall'>{blocksInfo[i].header}<div style={{'font-size': "20px"}} className='icon-more-horizontal'></div></div>
-        <div><div className='block__user-info'><img src={blocksInfo[i].userpic}/><div class='block__user-text-info'><span className='text__bold'>{blocksInfo[i].username}</span>
+        <div><div className='block__user-info'><img src={blocksInfo[i].userpic}/><div className='block__user-text-info'><span className='text__bold'>{blocksInfo[i].username}</span>
         <span className='text__xsmall'>{blocksInfo[i].userpos}</span></div></div>
         <div className='block__content text__middle'>{content}</div></div>
         <div className='controls__line'>
