@@ -1,4 +1,5 @@
 import MainContentBlock from './MainContentBlock';
+import SideContentBlock from './SideContentBlock';
 import photo1 from './Photo1.png'
 import photo2 from './Photo2.png'
 import photo3 from './Photo3.png'
@@ -26,7 +27,8 @@ function MainContent() {
   return <><div className='center__content-block'>
     <MainContentBlock blocksInfo={blocksInfo}/>
   </div>
-    <div className='side__content-block'></div></>;
+    <div className='side__content-block'>
+    <SideContentBlock/></div></>;
 }
 
 export default MainContent;

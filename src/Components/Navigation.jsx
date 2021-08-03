@@ -6,11 +6,13 @@ import icomoon from './icomoon/style.css'
 function Navigation(){
   return <ul className = "Navigation">
     <li className='border-elem'><NavigationItem props={['logo', logo]}></NavigationItem></li>
+    <li><div className='space-div'></div></li>
     <li><NavigationItem props={['button', 'icon-rss', 'feed']}></NavigationItem></li>
     <li><NavigationItem props={['button', 'icon-users', 'network']}></NavigationItem></li>
     <li><NavigationItem props={['button', 'icon-briefcase', 'jobs']}></NavigationItem></li>
     <li><NavigationItem props={['button', 'icon-message-square', 'chat']}></NavigationItem></li>
     <li><NavigationItem props={['button', 'icon-bell', 'notices']}></NavigationItem></li>
+    <li><div className='space-div'></div></li>
     <li className='border-elem'><NavigationItem props={['search', 'icon-search', 'search']}></NavigationItem></li>
     <li><NavigationItem props={['profile', userpic, ['D. Kargaev', 367, 32], 'icon-arrow-up-right']}></NavigationItem></li>
     <li className='border-elem'><NavigationItem props={['button', 'icon-more-horizontal', 'other']}></NavigationItem></li>
