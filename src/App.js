@@ -1,19 +1,19 @@
-import './App.css';
-import Navigation from './Components/Navigation';
-import FooterMenu from './Components/FooterMenu';
-import MainContent from './Components/MainContent';
+import "./App.css";
+import Navigation from "./Components/Navigation";
+import FooterMenu from "./Components/FooterMenu";
+import MainContent from "./Components/MainContent";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Navigation/>
+        <Navigation />
       </header>
       <div className="App-main__content">
-        <MainContent/>
+        <MainContent />
       </div>
       <footer className="App-footer">
-        <FooterMenu/>
+        <FooterMenu />
       </footer>
     </div>
   );
