@@ -26,26 +26,7 @@ function MainContentBlock({blocksInfo}) {
   </div></>);
 
   for(let i = 0; i < blocksInfo.length; i++){
-    let content = [];
-    if(blocksInfo[i].contenttypes.indexOf('text') != -1){
-      if(blocksInfo[i].text.length > 260){
-        content.push(<><span>{blocksInfo[i].text}</span><div className='expand-control'>read more</div></>);
-      } else {
-        content.push(<span>{blocksInfo[i].text}</span>);
-      }
-    }
-    if(blocksInfo[i].contenttypes.indexOf('photo') != -1){
-      content.push(<img src={blocksInfo[i].photo}/>);
-    }
-    if(blocksInfo[i].contenttypes.indexOf('files') != -1){
-      for(let j = 0; j < blocksInfo[i].files.length; j++){
-        content.push(<div className='content__file'><div className='file__logo icon-file-text'></div><div className='content__file-info'>
-        <span className='text__middle text__bold'>{blocksInfo[i].files[j].filename}</span><span className='text__xsmall'>
-          {blocksInfo[i].files[j].filetype + ', '+ blocksInfo[i].files[j].filesize}</span></div><div className='icon-download-cloud'></div></div>);
-      }
-    }
-    blocks.push(
-      <MainContentPost blockInfo={blocksInfo[i]} content={content}/>);
+    blocks.push(<MainContentPost blockInfo={blocksInfo[i]}/>);
   }
   return blocks;
 }
