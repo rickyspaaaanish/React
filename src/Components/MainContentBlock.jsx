@@ -1,3 +1,5 @@
+import MainContentPost from './MainContentPost';
+
 function MainContentBlock({blocksInfo}) {
   let blocks = [];
   blocks.push(
@@ -43,17 +45,7 @@ function MainContentBlock({blocksInfo}) {
       }
     }
     blocks.push(
-    <div className='Main__content-block'>
-      <div className='block__header-info text__xsmall'>{blocksInfo[i].header}<div style={{'font-size': "20px"}} className='icon-more-horizontal'></div></div>
-        <div><div className='block__user-info'><img src={blocksInfo[i].userpic}/><div className='block__user-text-info'><span className='text__bold'>{blocksInfo[i].username}</span>
-        <span className='text__xsmall'>{blocksInfo[i].userpos}</span></div></div>
-        <div className='block__content text__middle'>{content}</div></div>
-        <div className='controls__line'>
-          <button className='controls__line-button icon-thumbs-up-1'><span className='text__middle text__bold'>{blocksInfo[i].likes}</span></button>
-          <button className='controls__line-button icon-message-circle-1'><span className='text__middle text__bold'>{blocksInfo[i].comments}</span></button>
-          <button className='controls__line-button share-button icon-share-2'><span className='text__middle text__bold'>{('share').toUpperCase()}</span></button>
-      </div>
-    </div>);
+      <MainContentPost blockInfo={blocksInfo[i]} content={content}/>);
   }
   return blocks;
 }
