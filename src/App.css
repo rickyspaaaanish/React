@@ -425,6 +425,30 @@
   width: auto;
 }
 
+.content__file{
+  display: flex;
+  padding: 5px 0px;
+}
+
+.icon-file-text{
+  font-size: 22px;
+}
+
+.content__file-info{
+  display: flex;
+  flex-direction: column;
+}
+
+.file__logo{
+  align-items: center;
+  background: linear-gradient(180deg, #0077B5 0%, #0E6795 100%);
+  border-radius: 26px;
+  display: flex;
+  height: 42px;
+  justify-content: space-around;
+  width: 42px;
+}
+
 @font-face {
   font-family: Gotham Pro;
   src: url("fonts/GothamPro.ttf") format("truetype");
