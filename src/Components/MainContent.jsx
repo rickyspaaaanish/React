@@ -10,7 +10,7 @@ import { nanoid } from 'nanoid';
 function MainContent() {
   let blocksInfo = [
     {
-      key: nanoid(),
+      id: nanoid(),
       header: "Ted Bell, Annette Nguyen and Cody Hawkins liked this",
       userpic: photo1,
       username: "Theresa Steward",
@@ -22,7 +22,7 @@ function MainContent() {
       comments: 9,
     },
     {
-      key: nanoid(),
+      id: nanoid(),
       header: "Audrey Alexander comment this",
       userpic: photo2,
       username: "Kyle Fisher",
@@ -33,7 +33,7 @@ function MainContent() {
       comments: 3,
     },
     {
-      key: nanoid(),
+      id: nanoid(),
       header: "High rated post from your feed",
       userpic: photo3,
       username: "Brandon Wilson",
@@ -55,7 +55,7 @@ function MainContent() {
       comments: 7,
     },
     {
-      key: nanoid(),
+      id: nanoid(),
       header: "First post from Audrey Alexander",
       userpic: photo4,
       username: "Audrey Alexander",
