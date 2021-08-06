@@ -156,6 +156,10 @@
   color: #0275b1;
 }
 
+.text__up{
+  text-transform: uppercase;
+}
+
 .footer__navigation-controls{
   flex-direction: column;
 }

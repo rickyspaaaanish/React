@@ -5,39 +5,39 @@ import photo2 from "./Photo2.png";
 import photo3 from "./Photo3.png";
 import photo4 from "./Photo4.png";
 import rectangle3 from "./Rectangle 3.png";
+import { nanoid } from 'nanoid';
 
 function MainContent() {
   let blocksInfo = [
     {
+      key: nanoid(),
       header: "Ted Bell, Annette Nguyen and Cody Hawkins liked this",
       userpic: photo1,
       username: "Theresa Steward",
       userpos: "iOS developer",
-      contenttypes: ["text"],
       text:
-        "What did the Dursleys care if Harry lost his place on the House Quidditch team because he hadn’t practiced all summer? " +
-        "What was it to the Dursleys if Harry went back to school without any of his homework done? The Dursleys were what wizards called Muggles " +
-        "(not a drop of magical blood in their veins)",
+        "What did the Dursleys care if Harry lost his place on the House Quidditch team because he hadn’t practiced all summer? What was it to the Dursleys if Harry " +
+        "went back to school without any of his homework done? The Dursleys were what wizards called Muggles (not a drop of magical blood in their veins)",
       likes: 42,
       comments: 9,
     },
     {
+      key: nanoid(),
       header: "Audrey Alexander comment this",
       userpic: photo2,
       username: "Kyle Fisher",
       userpos: "Product designer at Commandor Corp.",
-      contenttypes: ["text", "photo"],
       text: "How’s your day going, guys?",
       photo: rectangle3,
       likes: 12,
       comments: 3,
     },
     {
+      key: nanoid(),
       header: "High rated post from your feed",
       userpic: photo3,
       username: "Brandon Wilson",
       userpos: "Senior UX designer",
-      contenttypes: ["text", "files"],
       text: "There is some new guidelines for iOS",
       files: [
         {
@@ -55,15 +55,14 @@ function MainContent() {
       comments: 7,
     },
     {
+      key: nanoid(),
       header: "First post from Audrey Alexander",
       userpic: photo4,
       username: "Audrey Alexander",
       userpos: "Team lead at Google",
-      contenttypes: ["text"],
       text:
-        "The bun runs along the road and meets a wolf. «Little bun, little bun, " +
-        "I want to eat you!» says the wolf. «I ran away from Grandfather, I ran away from Grandmother, I ran away from the hare. And I can run away from you, grey wolf!» " +
-        "says the bun and runs away.",
+        "The bun runs along the road and meets a wolf. «Little bun, little bun, I want to eat you!» says the wolf. «I ran away from Grandfather, I ran away from Grandmother, " +
+        "I ran away from the hare. And I can run away from you, grey wolf!» says the bun and runs away.",
       likes: 10,
       comments: 0,
     },

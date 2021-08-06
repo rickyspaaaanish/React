@@ -1,6 +1,6 @@
 function MainContentPost({ blockInfo }) {
   let content = [];
-  if (blockInfo.contenttypes.indexOf("text") != -1) {
+  if (blockInfo.hasOwnProperty("text")) {
     if (blockInfo.text.length > 260) {
       content.push(
         <>
@@ -12,10 +12,10 @@ function MainContentPost({ blockInfo }) {
       content.push(<span>{blockInfo.text}</span>);
     }
   }
-  if (blockInfo.contenttypes.indexOf("photo") != -1) {
-    content.push(<img src={blockInfo.photo} />);
+  if (blockInfo.hasOwnProperty("photo")) {
+    content.push(<img src={blockInfo.photo} alt=''/>);
   }
-  if (blockInfo.contenttypes.indexOf("files") != -1) {
+  if (blockInfo.hasOwnProperty("files")) {
     for (let j = 0; j < blockInfo.files.length; j++) {
       content.push(
         <div className="content__file">
@@ -38,13 +38,12 @@ function MainContentPost({ blockInfo }) {
       <div className="block__header-info text__xsmall">
         {blockInfo.header}
         <div
-          style={{ "font-size": "20px" }}
-          className="icon-more-horizontal"
+          className="icon-more-horizontal text__large"
         ></div>
       </div>
       <div>
         <div className="block__user-info">
-          <img src={blockInfo.userpic} />
+          <img src={blockInfo.userpic} alt=''/>
           <div className="block__user-text-info">
             <span className="text__bold">{blockInfo.username}</span>
             <span className="text__xsmall">{blockInfo.userpos}</span>
@@ -60,8 +59,8 @@ function MainContentPost({ blockInfo }) {
           <span className="text__middle text__bold">{blockInfo.comments}</span>
         </button>
         <button className="controls__line-button share-button icon-share-2">
-          <span className="text__middle text__bold">
-            {"share".toUpperCase()}
+          <span className="text__middle text__bold text__up">
+            share
           </span>
         </button>
       </div>

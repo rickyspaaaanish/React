@@ -5,8 +5,8 @@ function MainContentBlock({ blocksInfo }) {
   blocks.push(
     <>
       <div className="Main__content-block type-form">
-        <div className="type-form__header text__small text__bold">
-          {"new post".toUpperCase()}
+        <div className="type-form__header text__small text__bold text__up">
+          new post
         </div>
         <div className="type-form__controls text__large text__gray">
           What’s on your mind?
@@ -20,11 +20,11 @@ function MainContentBlock({ blocksInfo }) {
       </div>
       <div className="sort__selection-block">
         <div className="border-line"></div>
-        <div className="sort-control text__small text__bold">
-          {"Sort by: ".toUpperCase()}
-          <select className="sorting-select text__small text__bold blue-text">
-            <option>{"trending".toUpperCase()}</option>\
-            <option>{"latest".toUpperCase()}</option>
+        <div className="sort-control text__small text__bold text__up">
+          Sort by: 
+          <select className="sorting-select text__small text__bold blue-text text__up">
+            <option className='text__up'>trending</option>
+            <option className='text__up'>latest</option>
           </select>
         </div>
         <div className="border-line"></div>
