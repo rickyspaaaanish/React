@@ -1,5 +1,6 @@
 import background from "./Background.png";
 import userpic from "./Userpic.png";
+import logo_gold from "./Logo_gold.png";
 import Group1 from "./Group1.png";
 import Group2 from "./Group2.png";
 import Group3 from "./Group3.png";
@@ -8,6 +9,7 @@ import Article1 from "./Article_1.png";
 import Article2 from "./Article_2.png";
 import Article3 from "./Article_3.png";
 import Article from "./Article.jsx";
+
 
 function SideContentBlock() {
   let groups = [
@@ -39,7 +41,7 @@ function SideContentBlock() {
         <img src={background} alt="" />
         <img src={userpic} alt="" className="side__user-pic" />
         <div className="side__user-info__text">
-          <span className="text__middle text__bold">Dmitry Kargaev</span>
+          <span className="text__middle text__bold">Dmitry Kargaev<img className='logo__gold' src={logo_gold} alt=''/></span>
           <span className="text__xsmall">
             Freelance UX/UI designer, 80+ projects in web design, mobile apps
             (iOS & android) and creative projects. Open to offers.
