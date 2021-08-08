@@ -112,7 +112,6 @@
 
 .text__bold{
   font-weight: bold;
-  color: #181818;
 }
 
 .you-label{
@@ -443,7 +442,7 @@
 
 .content__file{
   align-items: center;
-  background: #E9F0F8;
+  background: #e9f0f8;
   border-radius: 4px;
   display: flex;
   height: 80px;
@@ -519,8 +518,8 @@
 
 .group{
   align-items: center;
-  background: #FFFFFF;
-  border: 1px solid #F4F4F4;
+  background: #fff;
+  border: 1px solid #f4f4f4;
   box-sizing: border-box;
   border-radius: 6px;
   display: flex;
@@ -528,6 +527,11 @@
   padding: 15px;
   margin: 5px 0px;
   width: 231px;
+}
+
+.group:hover{
+  border-color: #0275b1;
+  cursor: pointer;
 }
 
 .group__name{
@@ -543,10 +547,16 @@
 }
 
 .hashtag{
-  background: #E9F0F8;
+  background: #e9f0f8;
   border-radius: 4px;
   padding: 10px 12px;
   margin: 5px;
+}
+
+.hashtag:hover{
+  border: 1px solid #0275b1;
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .hashtags__block{
@@ -565,6 +575,11 @@
   margin: 15px 30px;
 }
 
+.article__desription:hover{
+  color: #0275b1;
+  cursor: pointer;
+}
+
 .article__desription{
   display: flex;
   flex-direction: column;
@@ -579,7 +594,7 @@
 }
 
 .new-article__button{
-  background: linear-gradient(180deg, #0077B5 0%, #0E6795 100%);
+  background: linear-gradient(180deg, #0077b5 0%, #0e6795 100%);
   border: 1px solid #0077b5;
   border-radius: 4px;
   height: 32px;
@@ -599,7 +614,7 @@
 
 .file__logo{
   align-items: center;
-  background: linear-gradient(180deg, #0077B5 0%, #0E6795 100%);
+  background: linear-gradient(180deg, #0077b5 0%, #0e6795 100%);
   border-radius: 26px;
   display: flex;
   height: 42px;
