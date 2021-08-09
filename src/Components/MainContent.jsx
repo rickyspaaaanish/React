@@ -5,7 +5,7 @@ import photo2 from "./Photo2.png";
 import photo3 from "./Photo3.png";
 import photo4 from "./Photo4.png";
 import rectangle3 from "./Rectangle 3.png";
-import { nanoid } from 'nanoid';
+import { nanoid } from "nanoid";
 
 function MainContent() {
   let blocksInfo = [

@@ -13,7 +13,7 @@ function MainContentPost({ blockInfo }) {
     }
   }
   if (blockInfo.hasOwnProperty("photo")) {
-    content.push(<img src={blockInfo.photo} alt=''/>);
+    content.push(<img src={blockInfo.photo} alt="" />);
   }
   if (blockInfo.hasOwnProperty("files")) {
     for (let j = 0; j < blockInfo.files.length; j++) {
@@ -37,13 +37,11 @@ function MainContentPost({ blockInfo }) {
     <div className="Main__content-block">
       <div className="block__header-info text__xsmall">
         {blockInfo.header}
-        <div
-          className="icon-more-horizontal text__large"
-        ></div>
+        <div className="icon-more-horizontal text__large"></div>
       </div>
       <div>
         <div className="block__user-info">
-          <img src={blockInfo.userpic} alt=''/>
+          <img src={blockInfo.userpic} alt="" />
           <div className="block__user-text-info">
             <span className="text__bold">{blockInfo.username}</span>
             <span className="text__xsmall">{blockInfo.userpos}</span>
@@ -59,9 +57,7 @@ function MainContentPost({ blockInfo }) {
           <span className="text__middle text__bold">{blockInfo.comments}</span>
         </button>
         <button className="controls__line-button share-button icon-share-2">
-          <span className="text__middle text__bold text__up">
-            share
-          </span>
+          <span className="text__middle text__bold text__up">share</span>
         </button>
       </div>
     </div>

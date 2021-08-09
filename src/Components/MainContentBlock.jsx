@@ -21,10 +21,10 @@ function MainContentBlock({ blocksInfo }) {
       <div className="sort__selection-block">
         <div className="border-line"></div>
         <div className="sort-control text__small text__bold text__up">
-          Sort by: 
+          Sort by:
           <select className="sorting-select text__small text__bold blue-text text__up">
-            <option className='text__up'>trending</option>
-            <option className='text__up'>latest</option>
+            <option className="text__up">trending</option>
+            <option className="text__up">latest</option>
           </select>
         </div>
         <div className="border-line"></div>

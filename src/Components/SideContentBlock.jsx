@@ -10,7 +10,6 @@ import Article2 from "./Article_2.png";
 import Article3 from "./Article_3.png";
 import Article from "./Article.jsx";
 
-
 function SideContentBlock() {
   let groups = [
     { img: Group1, groupname: "Moscow State Linguistical University" },
@@ -31,9 +30,9 @@ function SideContentBlock() {
   ];
 
   let articles = [
-    {img: Article1, name: 'How I make cool designs?', viewers: 6340},
-    {img: Article2, name: 'Advices for young HR-manage', viewers: 8123},
-    {img: Article3, name: 'A little about usability testing', viewers: 3912},
+    { img: Article1, name: "How I make cool designs?", viewers: 6340 },
+    { img: Article2, name: "Advices for young HR-manage", viewers: 8123 },
+    { img: Article3, name: "A little about usability testing", viewers: 3912 },
   ];
   return (
     <>
@@ -41,7 +40,10 @@ function SideContentBlock() {
         <img src={background} alt="" />
         <img src={userpic} alt="" className="side__user-pic" />
         <div className="side__user-info__text">
-          <span className="text__middle text__bold">Dmitry Kargaev<img className='logo__gold' src={logo_gold} alt=''/></span>
+          <span className="text__middle text__bold">
+            Dmitry Kargaev
+            <img className="logo__gold" src={logo_gold} alt="" />
+          </span>
           <span className="text__xsmall">
             Freelance UX/UI designer, 80+ projects in web design, mobile apps
             (iOS & android) and creative projects. Open to offers.
