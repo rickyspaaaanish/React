@@ -1,13 +1,13 @@
-import background from "./images/Background.png";
-import userpic from "./images/Userpic.png";
-import logo_gold from "./images/Logo_gold.png";
-import Group1 from "./images/Group1.png";
-import Group2 from "./images/Group2.png";
-import Group3 from "./images/Group3.png";
+import background from "./../images/Background.png";
+import userpic from "./../images/Userpic.png";
+import logo_gold from "./../images/Logo_gold.png";
+import Group1 from "./../images/Group1.png";
+import Group2 from "./../images/Group2.png";
+import Group3 from "./../images/Group3.png";
 import Group from "./Group.jsx";
-import Article1 from "./images/Article_1.png";
-import Article2 from "./images/Article_2.png";
-import Article3 from "./images/Article_3.png";
+import Article1 from "./../images/Article_1.png";
+import Article2 from "./../images/Article_2.png";
+import Article3 from "./../images/Article_3.png";
 import Article from "./Article.jsx";
 
 function SideContentBlock() {

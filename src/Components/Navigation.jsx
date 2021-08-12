@@ -1,7 +1,7 @@
 import NavigationItem from "./NavigationItem";
-import logo from "./images/Logo.png";
-import userpic from "./images/Rectangle.png";
-import icomoon from "./fonts/icomoon/style.css";
+import logo from "./../images/Logo.png";
+import userpic from "./../images/Rectangle.png";
+import icomoon from "./../fonts/icomoon/style.css";
 
 function Navigation() {
   let items = [
@@ -13,7 +13,12 @@ function Navigation() {
     { type: "button", icon: "icon-message-square", caption: "chat" },
     { type: "button", icon: "icon-bell", caption: "notices" },
     { type: "space-div" },
-    { type: "search", icon: "icon-search", caption: "search", class: "border-elem" },
+    {
+      type: "search",
+      icon: "icon-search",
+      caption: "search",
+      class: "border-elem",
+    },
     {
       type: "profile",
       userpic: userpic,

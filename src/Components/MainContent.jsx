@@ -1,10 +1,10 @@
 import MainContentBlock from "./MainContentBlock";
 import SideContentBlock from "./SideContentBlock";
-import photo1 from "./images/Photo1.png";
-import photo2 from "./images/Photo2.png";
-import photo3 from "./images/Photo3.png";
-import photo4 from "./images/Photo4.png";
-import rectangle3 from "./images/Rectangle 3.png";
+import photo1 from "./../images/Photo1.png";
+import photo2 from "./../images/Photo2.png";
+import photo3 from "./../images/Photo3.png";
+import photo4 from "./../images/Photo4.png";
+import rectangle3 from "./../images/Rectangle 3.png";
 import { nanoid } from "nanoid";
 
 function MainContent() {
