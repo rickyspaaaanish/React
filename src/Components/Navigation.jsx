@@ -1,7 +1,7 @@
 import NavigationItem from "./NavigationItem";
-import logo from "./Logo.png";
-import userpic from "./Rectangle.png";
-import icomoon from "./icomoon/style.css";
+import logo from "./images/Logo.png";
+import userpic from "./images/Rectangle.png";
+import icomoon from "./fonts/icomoon/style.css";
 
 function Navigation() {
   let items = [

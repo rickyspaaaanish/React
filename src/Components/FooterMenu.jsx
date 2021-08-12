@@ -1,4 +1,4 @@
-import logo from "./Logo.png";
+import logo from "./images/Logo.png";
 import FooterMenuItem from "./FooterMenuItem";
 
 function FooterMenu() {
