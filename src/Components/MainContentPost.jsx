@@ -51,7 +51,9 @@ function MainContentPost({ blockInfo }) {
       </div>
       <div className="controls__line">
         <button className="controls__line-button icon-thumbs-up-1">
-          <span className="text__middle text__bold">{blockInfo.likes}</span>
+          <span className="text__middle text__bold">
+            {(blockInfo.likes)}
+          </span>
         </button>
         <button className="controls__line-button icon-message-circle-1">
           <span className="text__middle text__bold">{blockInfo.comments}</span>

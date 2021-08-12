@@ -1,15 +1,18 @@
 import logo from "./../images/Logo.png";
 import FooterMenuItem from "./FooterMenuItem";
+import { nanoid } from "nanoid";
 
 function FooterMenu() {
   let buttons = [
     {
+      id: nanoid(),
       type: "button",
       class: "button__blue",
       caption: "Questions?",
       icon: "icon-help-circle",
     },
     {
+      id: nanoid(),
       type: "button",
       class: "button__white",
       caption: "Settings",
@@ -18,17 +21,17 @@ function FooterMenu() {
   ];
 
   let links = [
-    { type: "link", caption: "About" },
-    { type: "link", caption: "Careers" },
-    { type: "link", caption: "Advertising" },
-    { type: "link", caption: "Small Business" },
-    { type: "link", caption: "Talent Solutions" },
-    { type: "link", caption: "Marketing Solutions" },
-    { type: "link", caption: "Sales Solutions" },
-    { type: "link", caption: "Safety Center" },
-    { type: "link", caption: "Community Guidelines" },
-    { type: "link", caption: "Privacy & Terms" },
-    { type: "link", caption: "Mobile App" },
+    { id: nanoid(), type: "link", caption: "About" },
+    { id: nanoid(), type: "link", caption: "Careers" },
+    { id: nanoid(), type: "link", caption: "Advertising" },
+    { id: nanoid(), type: "link", caption: "Small Business" },
+    { id: nanoid(), type: "link", caption: "Talent Solutions" },
+    { id: nanoid(), type: "link", caption: "Marketing Solutions" },
+    { id: nanoid(), type: "link", caption: "Sales Solutions" },
+    { id: nanoid(), type: "link", caption: "Safety Center" },
+    { id: nanoid(), type: "link", caption: "Community Guidelines" },
+    { id: nanoid(), type: "link", caption: "Privacy & Terms" },
+    { id: nanoid(), type: "link", caption: "Mobile App" },
   ];
 
   return (
@@ -47,17 +50,17 @@ function FooterMenu() {
           <div className="footer__item">
             <ul className="footer__list">
               {links.slice(0, 4).map((element) => {
-                return <FooterMenuItem params={element} />;
+                return <FooterMenuItem params={element} key={element.id} />;
               })}
             </ul>
             <ul className="footer__list">
               {links.slice(4, 8).map((element) => {
-                return <FooterMenuItem params={element} />;
+                return <FooterMenuItem params={element} key={element.id} />;
               })}
             </ul>
             <ul className="footer__list">
               {links.slice(8).map((element) => {
-                return <FooterMenuItem params={element} />;
+                return <FooterMenuItem params={element} key={element.id} />;
               })}
             </ul>
           </div>
@@ -67,7 +70,7 @@ function FooterMenu() {
         <span className="list__header text__small text__bold">Fast access</span>
         <ul className="footer__list">
           {buttons.map((element) => {
-            return <FooterMenuItem params={element} />;
+            return <FooterMenuItem params={element} key={element.id} />;
           })}
         </ul>
       </div>
@@ -80,6 +83,7 @@ function FooterMenu() {
                 type: "select",
                 options: ["English", "Russian", "German", "Spanish"],
               }}
+              key={nanoid()}
             />
           </li>
         </ul>

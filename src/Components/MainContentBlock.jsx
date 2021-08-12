@@ -33,7 +33,11 @@ function MainContentBlock({ blocksInfo }) {
   );
 
   for (let i = 0; i < blocksInfo.length; i++) {
-    blocks.push(<MainContentPost blockInfo={blocksInfo[i]} />);
+    blocks.push(
+      <MainContentPost
+        blockInfo={(blocksInfo[i])}
+      />
+    );
   }
   return blocks;
 }
