@@ -4,60 +4,38 @@ import userpic from "./Rectangle.png";
 import icomoon from "./icomoon/style.css";
 
 function Navigation() {
+  let items = [
+    { type: "logo", img: logo, class: "border-elem" },
+    { type: "space-div" },
+    { type: "button", icon: "icon-rss", caption: "feed" },
+    { type: "button", icon: "icon-users", caption: "network" },
+    { type: "button", icon: "icon-briefcase", caption: "jobs" },
+    { type: "button", icon: "icon-message-square", caption: "chat" },
+    { type: "button", icon: "icon-bell", caption: "notices" },
+    { type: "space-div" },
+    { type: "search", icon: "icon-search", caption: "search", class: "border-elem" },
+    {
+      type: "profile",
+      userpic: userpic,
+      info: { name: "D. Kargaev", views: 367, diff: 32 },
+    },
+    {
+      type: "button",
+      icon: "icon-more-horizontal",
+      caption: "other",
+      class: "border-elem",
+    },
+  ];
+
   return (
     <ul className="Navigation">
-      <li className="border-elem">
-        <NavigationItem props={["logo", logo]}></NavigationItem>
-      </li>
-      <li>
-        <div className="space-div"></div>
-      </li>
-      <li>
-        <NavigationItem props={["button", "icon-rss", "feed"]}></NavigationItem>
-      </li>
-      <li>
-        <NavigationItem
-          props={["button", "icon-users", "network"]}
-        ></NavigationItem>
-      </li>
-      <li>
-        <NavigationItem
-          props={["button", "icon-briefcase", "jobs"]}
-        ></NavigationItem>
-      </li>
-      <li>
-        <NavigationItem
-          props={["button", "icon-message-square", "chat"]}
-        ></NavigationItem>
-      </li>
-      <li>
-        <NavigationItem
-          props={["button", "icon-bell", "notices"]}
-        ></NavigationItem>
-      </li>
-      <li>
-        <div className="space-div"></div>
-      </li>
-      <li className="border-elem">
-        <NavigationItem
-          props={["search", "icon-search", "search"]}
-        ></NavigationItem>
-      </li>
-      <li>
-        <NavigationItem
-          props={[
-            "profile",
-            userpic,
-            ["D. Kargaev", 367, 32],
-            "icon-arrow-up-right",
-          ]}
-        ></NavigationItem>
-      </li>
-      <li className="border-elem">
-        <NavigationItem
-          props={["button", "icon-more-horizontal", "other"]}
-        ></NavigationItem>
-      </li>
+      {items.map((element) => {
+        return (
+          <li className={element.class}>
+            <NavigationItem params={element} />
+          </li>
+        );
+      })}
     </ul>
   );
 }
