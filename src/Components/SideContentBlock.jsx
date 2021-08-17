@@ -9,6 +9,8 @@ import Article1 from "./../images/Article_1.png";
 import Article2 from "./../images/Article_2.png";
 import Article3 from "./../images/Article_3.png";
 import Article from "./Article.jsx";
+import textstyles from "./../styles/text.module.css";
+import classNames from "classnames";
 
 function SideContentBlock() {
   let groups = [
@@ -40,46 +42,85 @@ function SideContentBlock() {
         <img src={background} alt="" />
         <img src={userpic} alt="" className="side__user-pic" />
         <div className="side__user-info__text">
-          <span className="text__middle text__bold">
+          <span className={textstyles.middle + " " + textstyles.bold}>
             Dmitry Kargaev
             <img className="logo__gold" src={logo_gold} alt="" />
           </span>
-          <span className="text__xsmall">
+          <span className={textstyles.xsmall}>
             Freelance UX/UI designer, 80+ projects in web design, mobile apps
             (iOS & android) and creative projects. Open to offers.
           </span>
         </div>
       </div>
       <div className="side__new-article">
-        <button className="new-article__button button__blue text__small text__up">
+        <button
+          className={classNames(
+            "new-article__button button__blue",
+            textstyles.small,
+            textstyles.uppercase
+          )}
+        >
           write new article
         </button>
       </div>
       <div className="side__groups">
-        <div className="side__header text__small text__bold text__up">
-          my groups<span className="edit__control blue-text">edit list</span>
+        <div
+          className={classNames(
+            "side__header",
+            textstyles.small,
+            textstyles.bold,
+            textstyles.uppercase
+          )}
+        >
+          my groups<span className={classNames("edit__control", textstyles.blue)}>edit list</span>
         </div>
         <div className="groups__list">
           {groups.map((element) => {
             return <Group params={element} />;
           })}
         </div>
-        <div className="side__footer text__small text__bold text__up blue-text">
+        <div
+          className={classNames(
+            "side__footer",
+            textstyles.small,
+            textstyles.bold,
+            textstyles.uppercase,
+            textstyles.blue
+          )}
+        >
           show all(8)
         </div>
       </div>
       <div className="side__hashtags">
-        <div className="side__header text__small text__bold text__up">
+        <div
+          className={classNames(
+            "side__header",
+            textstyles.small,
+            textstyles.bold,
+            textstyles.uppercase
+          )}
+        >
           followed hashtags
         </div>
         <div className="hashtags__block">
           {hashtags.map((element) => {
-            return <div className="hashtag text__small">{"#" + element}</div>;
+            return (
+              <div className={classNames("hashtag", textstyles.small)}>
+                {"#" + element}
+              </div>
+            );
           })}
         </div>
       </div>
       <div className="side__articles">
-        <div className="side__header text__small text__bold text__up">
+        <div
+          className={classNames(
+            "side__header",
+            textstyles.small,
+            textstyles.bold,
+            textstyles.uppercase
+          )}
+        >
           Trending articles
         </div>
         <div className="articles__list">

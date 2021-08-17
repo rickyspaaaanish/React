@@ -1,5 +1,7 @@
 import { useState } from "react";
 import Likes from "./Likes";
+import textstyles from "./../styles/text.module.css";
+import classNames from "classnames";
 
 function MainContentPost({ blockInfo }) {
   let content = [];
@@ -7,8 +9,8 @@ function MainContentPost({ blockInfo }) {
   const [liked, setState] = useState(blockInfo.liked);
 
   const setLike = () => {
-    setState(!liked)
-    !liked ? blockInfo.likes++ : blockInfo.likes--
+    setState(!liked);
+    !liked ? blockInfo.likes++ : blockInfo.likes--;
   };
 
   if (blockInfo.hasOwnProperty("text")) {
@@ -32,10 +34,10 @@ function MainContentPost({ blockInfo }) {
         <div className="content__file">
           <div className="file__logo icon-file-text"></div>
           <div className="content__file-info">
-            <span className="text__middle text__bold">
+            <span className={classNames(textstyles.middle, textstyles.bold)}>
               {blockInfo.files[j].filename}
             </span>
-            <span className="text__xsmall">
+            <span className={textstyles.xsmall}>
               {blockInfo.files[j].filetype + ", " + blockInfo.files[j].filesize}
             </span>
           </div>
@@ -46,19 +48,19 @@ function MainContentPost({ blockInfo }) {
   }
   return (
     <div className="Main__content-block">
-      <div className="block__header-info text__xsmall">
+      <div className={"block__header-info " + textstyles.xsmall}>
         {blockInfo.header}
-        <div className="icon-more-horizontal text__large"></div>
+        <div className={classNames('icon-more-horizontal', textstyles.large)}></div>
       </div>
       <div>
         <div className="block__user-info">
           <img src={blockInfo.userpic} alt="" />
           <div className="block__user-text-info">
-            <span className="text__bold">{blockInfo.username}</span>
-            <span className="text__xsmall">{blockInfo.userpos}</span>
+            <span className={textstyles.bold}>{blockInfo.username}</span>
+            <span className={textstyles.xsmall}>{blockInfo.userpos}</span>
           </div>
         </div>
-        <div className="block__content text__middle">{content}</div>
+        <div className={"block__content " + textstyles.middle}>{content}</div>
       </div>
       <div className="controls__line">
         <Likes
@@ -68,10 +70,15 @@ function MainContentPost({ blockInfo }) {
           icon={liked ? "icon-thumbs-up" : "icon-thumbs-up-1"}
         />
         <button className="controls__line-button icon-message-circle-1">
-          <span className="text__middle text__bold">{blockInfo.comments}</span>
+          <span className={classNames(textstyles.middle, textstyles.bold)}>
+            {blockInfo.comments}
+          </span>
         </button>
         <button className="controls__line-button share-button icon-share-2">
-          <span className="text__middle text__bold text__up">share</span>
+          <span
+            className={classNames(textstyles.middle, textstyles.bold, textstyles.uppercase)}>
+            share
+          </span>
         </button>
       </div>
     </div>

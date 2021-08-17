@@ -47,40 +47,6 @@
   cursor: pointer;
 }
 
-.text__small{
-  font-family: "Gotham Pro";
-  font-size: 12px;
-  line-height: 11px;
-}
-
-.text__xsmall{
-  font-size: 10px;
-  line-height: 15px; 
-}
-
-.text__bold{
-  font-weight: bold;
-}
-
-.blue-text{
-  color: #0275b1;
-}
-
-.text__up{
-  text-transform: uppercase;
-}
-
-.text__middle{
-  font-family: Gotham Pro;
-  font-size: 14px;
-  line-height: 21px;
-}
-
-.new-article__button:hover{
-  background: #0e6795;
-  cursor: pointer;
-}
-
 .App-main__content{
   display: flex;
   border-bottom: 1px solid #e7e7e7;
@@ -221,16 +187,6 @@
 
 .type-form__controls{
   height: 79px;
-}
-
-.text__large{
-  font-family: 'Gotham Pro';
-  font-size: 18px;
-  line-height: 17px;
-}
-
-.text__gray{
-  color: #d1d1d1;
 }
 
 .sort__selection-block{
@@ -428,6 +384,11 @@
   color: #fff;
   height: 32px;
   width: 230px;
+}
+
+.new-article__button:hover{
+  background: #0e6795;
+  cursor: pointer;
 }
 
 .side__user-pic, .side__user-info__text{

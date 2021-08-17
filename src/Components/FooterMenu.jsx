@@ -2,6 +2,7 @@ import logo from "./../images/Logo.png";
 import FooterMenuItem from "./FooterMenuItem";
 import styles from "./../styles/FooterMenu.module.css";
 import textstyles from "./../styles/text.module.css";
+import classNames from "classnames";
 import { nanoid } from "nanoid";
 
 function FooterMenu() {
@@ -40,13 +41,25 @@ function FooterMenu() {
     <div className={styles.footer}>
       <div className={styles.logo}>
         <img src={logo} alt="" />
-        <div className={textstyles.middle + " " + textstyles.bold + " " + styles.logo__label}>
+        <div
+          className={classNames(
+            textstyles.middle,
+            textstyles.bold,
+            styles.logo__label
+          )}
+        >
           Linked<span className={textstyles.blue}>In</span>
         </div>
       </div>
       <div className={styles.item}>
         <div>
-          <span className={styles.list__header + " " + textstyles.small + " " + textstyles.bold}>
+          <span
+            className={classNames(
+              styles.list__header,
+              textstyles.small,
+              textstyles.bold
+            )}
+          >
             Navigation
           </span>
           <div className={styles.item}>
@@ -68,8 +81,14 @@ function FooterMenu() {
           </div>
         </div>
       </div>
-      <div className={styles.item + " " + styles.controls}>
-        <span className={styles.list__header + " " + textstyles.small + " " + textstyles.bold}>
+      <div className={classNames(styles.item, styles.controls)}>
+        <span
+          className={classNames(
+            styles.list__header,
+            textstyles.small,
+            textstyles.bold
+          )}
+        >
           Fast access
         </span>
         <ul className={styles.list}>
@@ -78,8 +97,14 @@ function FooterMenu() {
           })}
         </ul>
       </div>
-      <div className={styles.item + " " + styles.controls}>
-        <span className={styles.list__header + " " + textstyles.small + " " + textstyles.bold}>
+      <div className={classNames(styles.item, styles.controls)}>
+        <span
+          className={classNames(
+            styles.list__header,
+            textstyles.small,
+            textstyles.bold
+          )}
+        >
           Language
         </span>
         <ul className={styles.list}>

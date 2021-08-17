@@ -1,5 +1,6 @@
 import styles from "./../styles/HeaderItem.module.css";
 import textstyles from "./../styles/text.module.css";
+import classNames from "classnames";
 
 function NavigationItem({ params }) {
   switch (params.type) {
@@ -8,14 +9,14 @@ function NavigationItem({ params }) {
     case "button":
       return (
         <button className={styles.button}>
-          <span className={styles.button__icon + " " + params.icon} />
+          <span className={classNames(styles.button__icon, params.icon)} />
           {params.caption.toUpperCase()}
         </button>
       );
     case "search":
       return (
         <div className={styles.search}>
-          <span className={styles.button__icon + " " + params.icon} />
+          <span className={classNames(styles.button__icon, params.icon)} />
           <span className={styles.search__label}>
             {params.caption.charAt(0).toUpperCase() + params.caption.slice(1)}
           </span>
@@ -27,24 +28,24 @@ function NavigationItem({ params }) {
           <img src={params.userpic} alt="" />
           <div className={styles.profile__info}>
             <div className={styles.profile__info_line}>
-              <span className={textstyles.small + " " + textstyles.bold}>
+              <span className={classNames(textstyles.small, textstyles.bold)}>
                 {params.info.name.toUpperCase()}
               </span>
-              <span className={textstyles.small + " " + styles.you_label}>
+              <span className={classNames(textstyles.small, styles.you_label)}>
                 YOU
               </span>
             </div>
             <div className={styles.profile__info_line}>
-              <span className={textstyles.small + " " + styles.views_count}>
+              <span
+                className={classNames(textstyles.small, styles.views_count)}
+              >
                 {params.info.views + " views today"}
               </span>
               <div
-                className={textstyles.small + " " + styles.difference_label}
-              >
-                {params.info.diff >= 0
-                  ? "+" + params.info.diff
-                  : params.info.diff}
-                <span className={textstyles.small + "icon-arrow-up-right"} />
+                className={classNames(textstyles.small, styles.difference_label)}>
+                {params.info.diff >= 0 ? "+" + params.info.diff : params.info.diff}
+                <span
+                  className={classNames(textstyles.small, "icon-arrow-up-right")}/>
               </div>
             </div>
           </div>
