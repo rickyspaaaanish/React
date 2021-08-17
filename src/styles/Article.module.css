@@ -1,0 +1,16 @@
+.aricle {
+  display: flex;
+  margin: 15px 30px;
+}
+
+.desription {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-left: 15px;
+}
+
+.desription:hover {
+  color: #0275b1;
+  cursor: pointer;
+}

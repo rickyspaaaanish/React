@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Likes from "./Likes";
 import textstyles from "./../styles/text.module.css";
+import styles from "./../styles/Post.module.css";
+import buttonstyles from "./../styles/PostButton.module.css";
 import classNames from "classnames";
 
 function MainContentPost({ blockInfo }) {
@@ -18,7 +20,7 @@ function MainContentPost({ blockInfo }) {
       content.push(
         <>
           <span>{blockInfo.text}</span>
-          <div className="expand-control">read more</div>
+          <div className={styles.expand}>read more</div>
         </>
       );
     } else {
@@ -31,9 +33,9 @@ function MainContentPost({ blockInfo }) {
   if (blockInfo.hasOwnProperty("files")) {
     for (let j = 0; j < blockInfo.files.length; j++) {
       content.push(
-        <div className="content__file">
-          <div className="file__logo icon-file-text"></div>
-          <div className="content__file-info">
+        <div className={styles.file}>
+          <div className={classNames(styles.file__logo, styles.file__icon, 'icon-file-text')}></div>
+          <div className={styles.file__info}>
             <span className={classNames(textstyles.middle, textstyles.bold)}>
               {blockInfo.files[j].filename}
             </span>
@@ -41,40 +43,40 @@ function MainContentPost({ blockInfo }) {
               {blockInfo.files[j].filetype + ", " + blockInfo.files[j].filesize}
             </span>
           </div>
-          <div className="icon-download-cloud"></div>
+          <div className={classNames(styles.file__icon, "icon-download-cloud")}></div>
         </div>
       );
     }
   }
   return (
-    <div className="Main__content-block">
-      <div className={"block__header-info " + textstyles.xsmall}>
+    <div className={styles.main}>
+      <div className={classNames(styles.header, textstyles.xsmall)}>
         {blockInfo.header}
         <div className={classNames('icon-more-horizontal', textstyles.large)}></div>
       </div>
       <div>
-        <div className="block__user-info">
+        <div className={styles.user__block}>
           <img src={blockInfo.userpic} alt="" />
-          <div className="block__user-text-info">
+          <div className={styles.user__info}>
             <span className={textstyles.bold}>{blockInfo.username}</span>
             <span className={textstyles.xsmall}>{blockInfo.userpos}</span>
           </div>
         </div>
-        <div className={"block__content " + textstyles.middle}>{content}</div>
+        <div className={classNames(styles.content, textstyles.middle)}>{content}</div>
       </div>
-      <div className="controls__line">
+      <div className={styles.controls}>
         <Likes
           likes={blockInfo.likes}
           liked={liked}
           onClick={setLike}
           icon={liked ? "icon-thumbs-up" : "icon-thumbs-up-1"}
         />
-        <button className="controls__line-button icon-message-circle-1">
+        <button className={classNames(buttonstyles.button, 'icon-message-circle-1')}>
           <span className={classNames(textstyles.middle, textstyles.bold)}>
             {blockInfo.comments}
           </span>
         </button>
-        <button className="controls__line-button share-button icon-share-2">
+        <button className={classNames(buttonstyles.button, buttonstyles.share__button, 'icon-share-2')}>
           <span
             className={classNames(textstyles.middle, textstyles.bold, textstyles.uppercase)}>
             share

@@ -10,6 +10,7 @@ import Article2 from "./../images/Article_2.png";
 import Article3 from "./../images/Article_3.png";
 import Article from "./Article.jsx";
 import textstyles from "./../styles/text.module.css";
+import styles from "./../styles/SideBlock.module.css";
 import classNames from "classnames";
 
 function SideContentBlock() {
@@ -38,13 +39,13 @@ function SideContentBlock() {
   ];
   return (
     <>
-      <div className="side__user-info">
+      <div className={classNames(styles.user__info, styles.content__block)}>
         <img src={background} alt="" />
-        <img src={userpic} alt="" className="side__user-pic" />
-        <div className="side__user-info__text">
+        <img src={userpic} alt="" className={styles.user__info_content} />
+        <div className={classNames(styles.user__info_content, styles.info__text)}>
           <span className={textstyles.middle + " " + textstyles.bold}>
             Dmitry Kargaev
-            <img className="logo__gold" src={logo_gold} alt="" />
+            <img src={logo_gold} alt="" />
           </span>
           <span className={textstyles.xsmall}>
             Freelance UX/UI designer, 80+ projects in web design, mobile apps
@@ -52,36 +53,30 @@ function SideContentBlock() {
           </span>
         </div>
       </div>
-      <div className="side__new-article">
-        <button
-          className={classNames(
-            "new-article__button button__blue",
-            textstyles.small,
-            textstyles.uppercase
-          )}
-        >
+      <div className={classNames(styles.content__block, styles.new_article)}>
+        <button className={classNames(styles.new_article__button, textstyles.small, textstyles.uppercase)}>
           write new article
         </button>
       </div>
-      <div className="side__groups">
+      <div className={classNames(styles.content__block, styles.groups)}>
         <div
           className={classNames(
-            "side__header",
+            styles.header,
             textstyles.small,
             textstyles.bold,
             textstyles.uppercase
           )}
         >
-          my groups<span className={classNames("edit__control", textstyles.blue)}>edit list</span>
+          my groups<span className={classNames(styles.edit, textstyles.blue)}>edit list</span>
         </div>
-        <div className="groups__list">
+        <div className={styles.groups__list}>
           {groups.map((element) => {
             return <Group params={element} />;
           })}
         </div>
         <div
           className={classNames(
-            "side__footer",
+            styles.footer,
             textstyles.small,
             textstyles.bold,
             textstyles.uppercase,
@@ -91,10 +86,10 @@ function SideContentBlock() {
           show all(8)
         </div>
       </div>
-      <div className="side__hashtags">
+      <div className={styles.hashtags}>
         <div
           className={classNames(
-            "side__header",
+            styles.header,
             textstyles.small,
             textstyles.bold,
             textstyles.uppercase
@@ -102,20 +97,20 @@ function SideContentBlock() {
         >
           followed hashtags
         </div>
-        <div className="hashtags__block">
+        <div className={styles.hashtag__control}>
           {hashtags.map((element) => {
             return (
-              <div className={classNames("hashtag", textstyles.small)}>
+              <div className={classNames(styles.hashtag, textstyles.small)}>
                 {"#" + element}
               </div>
             );
           })}
         </div>
       </div>
-      <div className="side__articles">
+      <div className={styles.articles}>
         <div
           className={classNames(
-            "side__header",
+            styles.header,
             textstyles.small,
             textstyles.bold,
             textstyles.uppercase
@@ -123,7 +118,7 @@ function SideContentBlock() {
         >
           Trending articles
         </div>
-        <div className="articles__list">
+        <div className={styles.articles__list}>
           {articles.map((element) => {
             return <Article params={element} />;
           })}

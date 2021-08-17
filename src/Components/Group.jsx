@@ -1,16 +1,13 @@
 import textstyles from "./../styles/text.module.css";
+import styles from "./../styles/Group.module.css";
 import classNames from "classnames";
 
 function Group({ params }) {
   return (
-    <div className="group">
+    <div className={styles.group}>
       <img src={params.img} alt="" />
       <span
-        className={classNames(
-          "group__name",
-          textstyles.middle,
-          textstyles.bold
-        )}
+        className={classNames(styles.name, textstyles.middle, textstyles.bold)}
       >
         {params.groupname}
       </span>
