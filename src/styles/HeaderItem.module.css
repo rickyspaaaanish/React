@@ -1,0 +1,98 @@
+.logo {
+  padding: 17px 40px;
+}
+
+.button {
+  align-items: stretch;
+  background-color: #fff;
+  border: 1px solid #fff;
+  color: #181818;
+  display: flex;
+  flex-direction: column;
+  font-family: "Gotham Pro";
+  font-weight: bold;
+  font-size: 12px;
+  justify-content: space-evenly;
+  height: 80px;
+  line-height: 11px;
+  padding: 15%;
+  width: 90px;
+}
+
+.button:hover {
+  border-bottom: 3px solid #0275b1;
+  color: #0275b1;
+  cursor: pointer;
+}
+
+.button:active {
+  border-bottom: 2px solid #0275b1;
+  color: #0275b1;
+  cursor: pointer;
+}
+
+.button__icon {
+  font-size: 24px;
+}
+
+.search {
+  align-items: center;
+  color: #cecece;
+  display: flex;
+  font-family: "Gotham Pro";
+  font-size: 16px;
+  justify-content: flex-start;
+  line-height: 15px;
+  left: 33px;
+  position: relative;
+  width: 367px;
+}
+
+.search__label {
+  left: 25px;
+  position: relative;
+}
+
+.profile {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  left: 30px;
+  position: relative;
+  width: 330px;
+}
+
+.profile__info {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  left: 15px;
+  position: relative;
+}
+
+.profile__info_line {
+  align-items: center;
+  display: flex;
+  height: 20px;
+}
+
+.you_label {
+  color: #d1d1d1;
+  left: 10px;
+  position: relative;
+}
+
+.views_count {
+  color: #747474;
+}
+
+.difference_label {
+  font-weight: bold;
+  color: #02b033;
+  left: 5px;
+  position: relative;
+}
+
+.space_div {
+  width: 16px;
+}

@@ -1,5 +1,7 @@
 import logo from "./../images/Logo.png";
 import FooterMenuItem from "./FooterMenuItem";
+import styles from "./../styles/FooterMenu.module.css";
+import textstyles from "./../styles/text.module.css";
 import { nanoid } from "nanoid";
 
 function FooterMenu() {
@@ -7,14 +9,14 @@ function FooterMenu() {
     {
       id: nanoid(),
       type: "button",
-      class: "button__blue",
+      color: "blue",
       caption: "Questions?",
       icon: "icon-help-circle",
     },
     {
       id: nanoid(),
       type: "button",
-      class: "button__white",
+      color: "white",
       caption: "Settings",
       icon: "icon-settings",
     },
@@ -35,30 +37,30 @@ function FooterMenu() {
   ];
 
   return (
-    <div className="footer">
-      <div className="footer__item-logo">
+    <div className={styles.footer}>
+      <div className={styles.logo}>
         <img src={logo} alt="" />
-        <div className="text__middle text__bold footer__logo-text">
-          Linked<span className="blue-text">In</span>
+        <div className={textstyles.middle + " " + textstyles.bold + " " + styles.logo__label}>
+          Linked<span className={textstyles.blue}>In</span>
         </div>
       </div>
-      <div className="footer__item">
+      <div className={styles.item}>
         <div>
-          <span className="list__header text__small text__bold">
+          <span className={styles.list__header + " " + textstyles.small + " " + textstyles.bold}>
             Navigation
           </span>
-          <div className="footer__item">
-            <ul className="footer__list">
+          <div className={styles.item}>
+            <ul className={styles.list}>
               {links.slice(0, 4).map((element) => {
                 return <FooterMenuItem params={element} key={element.id} />;
               })}
             </ul>
-            <ul className="footer__list">
+            <ul className={styles.list}>
               {links.slice(4, 8).map((element) => {
                 return <FooterMenuItem params={element} key={element.id} />;
               })}
             </ul>
-            <ul className="footer__list">
+            <ul className={styles.list}>
               {links.slice(8).map((element) => {
                 return <FooterMenuItem params={element} key={element.id} />;
               })}
@@ -66,17 +68,21 @@ function FooterMenu() {
           </div>
         </div>
       </div>
-      <div className="footer__item footer__navigation-controls">
-        <span className="list__header text__small text__bold">Fast access</span>
-        <ul className="footer__list">
+      <div className={styles.item + " " + styles.controls}>
+        <span className={styles.list__header + " " + textstyles.small + " " + textstyles.bold}>
+          Fast access
+        </span>
+        <ul className={styles.list}>
           {buttons.map((element) => {
             return <FooterMenuItem params={element} key={element.id} />;
           })}
         </ul>
       </div>
-      <div className="footer__item footer__navigation-controls">
-        <span className="list__header text__small text__bold">Language</span>
-        <ul className="footer__list">
+      <div className={styles.item + " " + styles.controls}>
+        <span className={styles.list__header + " " + textstyles.small + " " + textstyles.bold}>
+          Language
+        </span>
+        <ul className={styles.list}>
           <li>
             <FooterMenuItem
               params={{

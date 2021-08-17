@@ -1,0 +1,37 @@
+.small {
+  font-family: "Gotham Pro";
+  font-size: 12px;
+  line-height: 11px;
+}
+
+.xsmall {
+  font-size: 10px;
+  line-height: 15px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.blue {
+  color: #0275b1;
+}
+
+.upercase {
+  text-transform: uppercase;
+}
+
+.middle {
+  font-family: "Gotham Pro";
+  font-size: 14px;
+  line-height: 21px;
+}
+.large {
+  font-family: "Gotham Pro";
+  font-size: 18px;
+  line-height: 17px;
+}
+
+.gray {
+  color: #d1d1d1;
+}

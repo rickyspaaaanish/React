@@ -35,68 +35,16 @@
   padding: 0;
 }
 
-.button {
-  align-items: stretch;
-  background-color: #fff;
-  border: 1px solid #fff;
-  color: #181818;
-  display: flex;
-  flex-direction: column;
-  font-family: "Gotham Pro";
-  font-weight: bold;
-  font-size: 12px;
-  justify-content: space-evenly;
-  height: 80px;
-  line-height: 11px;
-  padding: 15%;
-  width: 90px;
-}
-
-.button:hover, .controls__line-button:hover{
+.controls__line-button:hover{
   border-bottom: 3px solid #0275b1;
   color: #0275b1;
   cursor: pointer;
 }
 
-.button:active, .controls__line-button:active{
+.controls__line-button:active{
   border-bottom: 2px solid #0275b1;
   color: #0275b1;
   cursor: pointer;
-}
-
-.navigation__item-icon{
-  font-size: 24px;
-}
-
-.logo {
-  padding: 17px 40px;
-}
-
-.search {
-  align-items: center;
-  color: #cecece;
-  display: flex;
-  font-family: "Gotham Pro";
-  font-size: 16px;
-  justify-content: flex-start;
-  line-height: 15px;
-  left: 33px;
-  position: relative;
-  width: 367px;
-}
-
-.search-label{
-  left: 25px;
-  position: relative;
-}
-
-.profile{
-  align-items: center;
-  display: flex;
-  justify-content: flex-start;
-  left: 30px;
-  position: relative;
-  width: 330px;
 }
 
 .text__small{
@@ -114,43 +62,6 @@
   font-weight: bold;
 }
 
-.you-label{
-  color: #d1d1d1;
-  left: 10px;
-  position: relative;
-}
-
-.views-count{
-  color: #747474;
-}
-
-.difference-label{
-  font-weight: bold;
-  color: #02b033;
-  left: 5px;
-  position: relative;
-}
-
-.profile__info{
-  align-items: flex-start;
-  display: flex;
-  flex-direction: column;
-  left: 15px;
-  position: relative;
-}
-
-.profile__info-line{
-  align-items: center;
-  display: flex;
-  height: 20px;
-}
-
-.footer, .footer__item{
-  align-items: baseline;
-  display: flex;
-  height: inherit;
-}
-
 .blue-text{
   color: #0275b1;
 }
@@ -159,98 +70,15 @@
   text-transform: uppercase;
 }
 
-.footer__navigation-controls{
-  flex-direction: column;
-}
-
-.footer__item-logo{
-  position: relative;
-  top: 30px;
-  width: 260px;
-}
-
-.footer__logo-text{
-  position: relative;
-  left: 8px;
-}
-
 .text__middle{
   font-family: Gotham Pro;
   font-size: 14px;
   line-height: 21px;
 }
 
-.footer__list-item{
-  display: flex;
-  height: 30px;
-}
-
-.footer__list{
-  align-items: flex-start;
-  display: flex;
-  flex-direction: column;
-  max-height: 120px;
-  list-style: none;
-  padding: 0px;
-  margin: 0px;
-  width: 200px;
-}
-
-.footer__link{
-  max-height: 20px;
-}
-
-.list__header{
-  align-items: center;
-  display: flex;
-  height: 50px;
-}
-
-.language__select{
-  border: 1px solid #f0f0f0;
-  box-sizing: border-box;
-  border-radius: 4px;
-  display: flex;
-  height: 30px;
-  width: 270px;
-}
-
-.footer__button{
-  align-items: center;
-  border: 1px solid #0275b1;
-  box-sizing: border-box;
-  border-radius: 4px;
-  display: flex;
-  font-family: "Gotham Pro";
-  font-weight: bold;
-  height: 32px;
-  justify-content: space-between;
-  margin-bottom: 5px;
-  padding: 15px;
-  width: 170px;
-}
-
-.footer__button:active{
-  border-width: 2px;
-}
-
-.button__blue:hover, .new-article__button:hover{
+.new-article__button:hover{
   background: #0e6795;
   cursor: pointer;
-}
-
-.button__white:hover{
-  background: linear-gradient(180deg, #f0f0f0 0%, #d1d1d1 100%);
-}
-
-.button__blue{
-  background: #0275b1;
-  color: #fff;
-}
-
-.button__white{
-  background: #f7f9fb;
-  color: #0275b1;
 }
 
 .App-main__content{

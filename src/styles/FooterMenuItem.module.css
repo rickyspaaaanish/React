@@ -1,0 +1,55 @@
+.item {
+  display: flex;
+  height: 30px;
+}
+
+.link {
+  max-height: 20px;
+}
+
+.button {
+  align-items: center;
+  border: 1px solid #0275b1;
+  box-sizing: border-box;
+  border-radius: 4px;
+  display: flex;
+  font-family: "Gotham Pro";
+  font-weight: bold;
+  height: 32px;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  padding: 15px;
+  width: 170px;
+}
+
+.button:active {
+  border-width: 2px;
+}
+
+.button_blue:hover {
+  background: #0e6795;
+  cursor: pointer;
+}
+
+.select {
+  border: 1px solid #f0f0f0;
+  box-sizing: border-box;
+  border-radius: 4px;
+  display: flex;
+  height: 30px;
+  width: 270px;
+}
+
+.button_white:hover {
+  background: linear-gradient(180deg, #f0f0f0 0%, #d1d1d1 100%);
+}
+
+.button_blue {
+  background: #0275b1;
+  color: #fff;
+}
+
+.button_white {
+  background: #f7f9fb;
+  color: #0275b1;
+}
