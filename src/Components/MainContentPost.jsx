@@ -35,7 +35,7 @@ function MainContentPost({ blockInfo }) {
     for (let j = 0; j < blockInfo.files.length; j++) {
       content.push(
         <div className={styles.file}>
-          <div className={classNames(styles.file__logo, styles.file__icon, 'icon-file-text')}></div>
+          <div className={classNames(styles.file__logo, styles.file__icon, "icon-file-text")}></div>
           <div className={styles.file__info}>
             <span className={classNames(textstyles.middle, textstyles.bold)}>
               {blockInfo.files[j].filename}
@@ -53,7 +53,7 @@ function MainContentPost({ blockInfo }) {
     <div className={styles.main}>
       <div className={classNames(styles.header, textstyles.xsmall)}>
         {blockInfo.header}
-        <div className={classNames('icon-more-horizontal', textstyles.large)}></div>
+        <div className={classNames("icon-more-horizontal", textstyles.large)}></div>
       </div>
       <div>
         <div className={styles.user__block}>
@@ -72,12 +72,12 @@ function MainContentPost({ blockInfo }) {
           onClick={setLike}
           icon={liked ? "icon-thumbs-up" : "icon-thumbs-up-1"}
         />
-        <button className={classNames(buttonstyles.button, 'icon-message-circle-1')}>
+        <button className={classNames(buttonstyles.button, "icon-message-circle-1")}>
           <span className={classNames(textstyles.middle, textstyles.bold)}>
             {blockInfo.comments}
           </span>
         </button>
-        <button className={classNames(buttonstyles.button, buttonstyles.share__button, 'icon-share-2')}>
+        <button className={classNames(buttonstyles.button, buttonstyles.share__button, "icon-share-2")}>
           <span
             className={classNames(textstyles.middle, textstyles.bold, textstyles.uppercase)}>
             share
