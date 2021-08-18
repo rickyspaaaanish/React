@@ -12,7 +12,7 @@ function MainContentPost({ blockInfo }) {
 
   const setLike = () => {
     setState(!liked);
-    !liked ? blockInfo.likes++ : blockInfo.likes--;
+    localStorage.setItem("likes", !liked ? blockInfo.likes++ : blockInfo.likes--);
   };
 
   if (blockInfo.hasOwnProperty("text")) {
