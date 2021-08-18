@@ -43,7 +43,7 @@ function MainContentPost({ blockInfo }) {
               {blockInfo.files[j].filetype + ", " + blockInfo.files[j].filesize}
             </span>
           </div>
-          <div className={classNames(styles.file__icon, "icon-download-cloud")}></div>
+          <div className={classNames(styles.file__icon, styles.icon__download, "icon-download-cloud")}></div>
         </div>
       );
     }

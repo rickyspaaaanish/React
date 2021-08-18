@@ -86,7 +86,7 @@ function SideContentBlock() {
           show all(8)
         </div>
       </div>
-      <div className={styles.hashtags}>
+      <div className={classNames(styles.content__block, styles.hashtags)}>
         <div
           className={classNames(
             styles.header,
@@ -107,7 +107,7 @@ function SideContentBlock() {
           })}
         </div>
       </div>
-      <div className={styles.articles}>
+      <div className={classNames(styles.content__block, styles.articles)}>
         <div
           className={classNames(
             styles.header,

@@ -87,3 +87,9 @@
 .file__icon {
   font-size: 22px;
 }
+
+.icon__download{
+  position: relative;
+  margin-left: auto;
+  margin-right: 20px;
+}

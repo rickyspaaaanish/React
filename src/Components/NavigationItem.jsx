@@ -52,7 +52,7 @@ function NavigationItem({ params }) {
         </div>
       );
     case "space-div":
-      return <div className={params.type} />;
+      return <div className={styles.space_div} />;
     default:
       return;
   }
