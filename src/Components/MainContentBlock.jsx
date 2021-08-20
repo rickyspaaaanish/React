@@ -2,8 +2,16 @@ import MainContentPost from "./MainContentPost";
 import textstyles from "./../styles/text.module.css";
 import styles from "./../styles/MainContent.module.css";
 import classNames from "classnames";
+import { useState } from "react";
 
 function MainContentBlock({ blocksInfo }) {
+  const[newBlocksInfo, setState] = useState(blocksInfo);
+
+  const updatePost = () => {
+    setState(newBlocksInfo);
+    localStorage.setItem("posts", JSON.stringify(newBlocksInfo));
+  };
+
   let blocks = [];
   blocks.push(
     <>
@@ -62,7 +70,7 @@ function MainContentBlock({ blocksInfo }) {
   );
 
   for (let i = 0; i < blocksInfo.length; i++) {
-    blocks.push(<MainContentPost blockInfo={blocksInfo[i]} />);
+    blocks.push(<MainContentPost blockInfo={blocksInfo[i]} onClick = {updatePost} />);
   }
   return blocks;
 }

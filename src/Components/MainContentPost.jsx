@@ -5,15 +5,16 @@ import styles from "./../styles/Post.module.css";
 import buttonstyles from "./../styles/PostButton.module.css";
 import classNames from "classnames";
 
-function MainContentPost({ blockInfo }) {
+function MainContentPost({ blockInfo, onClick }) {
   let content = [];
 
   const [liked, setState] = useState(blockInfo.liked);
+  const [likes, setCount] = useState(blockInfo.likes);
 
   const setLike = () => {
     setState(!liked);
     !liked ? blockInfo.likes++ : blockInfo.likes--;
-    localStorage.setItem("likes", blockInfo.likes);
+    setCount(blockInfo.likes);
   };
 
   if (blockInfo.hasOwnProperty("text")) {
@@ -50,7 +51,7 @@ function MainContentPost({ blockInfo }) {
     }
   }
   return (
-    <div className={styles.main}>
+    <div className={styles.main} onClick={onClick}>
       <div className={classNames(styles.header, textstyles.xsmall)}>
         {blockInfo.header}
         <div className={classNames("icon-more-horizontal", textstyles.large)}></div>

@@ -72,10 +72,12 @@ function MainContent() {
     },
   ];
 
+  localStorage.setItem("posts", JSON.stringify(blocksInfo));
+
   return (
     <>
       <div className="center__content-block">
-        <MainContentBlock blocksInfo={blocksInfo} />
+        <MainContentBlock blocksInfo={JSON.parse(localStorage.getItem("posts"))} />
       </div>
       <div className="side__content-block">
         <SideContentBlock />
