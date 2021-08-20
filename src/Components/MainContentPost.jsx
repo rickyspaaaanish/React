@@ -13,6 +13,7 @@ function MainContentPost({ blockInfo, onClick }) {
 
   const setLike = () => {
     setState(!liked);
+    blockInfo.liked = !liked;
     !liked ? blockInfo.likes++ : blockInfo.likes--;
     setCount(blockInfo.likes);
   };

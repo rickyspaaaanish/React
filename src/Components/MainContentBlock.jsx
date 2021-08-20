@@ -5,11 +5,11 @@ import classNames from "classnames";
 import { useState } from "react";
 
 function MainContentBlock({ blocksInfo }) {
-  const[newBlocksInfo, setState] = useState(blocksInfo);
+  const[newPostInfo, setState] = useState(blocksInfo);
 
   const updatePost = () => {
-    setState(newBlocksInfo);
-    localStorage.setItem("posts", JSON.stringify(newBlocksInfo));
+    setState(newPostInfo);
+    localStorage.setItem("posts", JSON.stringify(newPostInfo));
   };
 
   let blocks = [];

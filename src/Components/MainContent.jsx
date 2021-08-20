@@ -71,9 +71,11 @@ function MainContent() {
       comments: 0,
     },
   ];
-
-  localStorage.setItem("posts", JSON.stringify(blocksInfo));
-
+  
+  if(!localStorage.getItem("posts")){
+    localStorage.setItem("posts", JSON.stringify(blocksInfo));
+  }
+  
   return (
     <>
       <div className="center__content-block">
