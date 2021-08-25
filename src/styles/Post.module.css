@@ -36,6 +36,13 @@
   text-align: left;
 }
 
+.gradient{
+  background-image: linear-gradient(rgba(24, 24, 24, 1), rgba(24, 24, 24, 0));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+}
+
 .expand {
   align-content: flex-start;
   color: #0275b1;

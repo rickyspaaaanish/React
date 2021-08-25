@@ -18,12 +18,22 @@ function MainContentPost({ blockInfo, onClick }) {
     setCount(blockInfo.likes);
   };
 
+  const [collapsed, setExpanded] = useState(blockInfo.text.length > 260);
+
+  const collapse = (event) => {
+    setExpanded(!collapsed);
+    event.target.innerHTML = '';
+    event.target.parentElement.textContent = blockInfo.text
+  }
+
   if (blockInfo.hasOwnProperty("text")) {
     if (blockInfo.text.length > 260) {
       content.push(
         <>
-          <span>{blockInfo.text}</span>
-          <div className={styles.expand}>read more</div>
+          <div>
+            <div className={styles.gradient}>{blockInfo.text.slice(0, 260)}</div>
+            <div className={styles.expand} onClick={collapse}>read more</div>
+          </div>
         </>
       );
     } else {
