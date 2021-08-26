@@ -1,29 +1,38 @@
 import MainContentPost from "./MainContentPost";
 import Form from "./Form";
 import { useState } from "react";
-import { connect } from "react-redux";
+import { connect, useDispatch } from "react-redux";
+import { updatePosts } from "../redux/actions";
 
 function MainContentBlock({ postsInfo }) {
-  const[newPostInfo, setState] = useState(postsInfo);
+  const [newPostInfo, setState] = useState(postsInfo);
+
+  const dispatch = useDispatch();
 
   const updatePost = () => {
     setState(newPostInfo);
-    localStorage.setItem("posts", JSON.stringify(newPostInfo));
+    dispatch(updatePosts(JSON.stringify(postsInfo)));
+    localStorage.setItem("posts", JSON.stringify(postsInfo));
   };
 
-  let blocks = [];
-  blocks.push(
-    <Form/>
+  return (
+    <>
+      <Form />
+      {postsInfo.map((element) => {
+        return (
+          <MainContentPost
+            blockInfo={element}
+            key={element.id}
+            onClick={updatePost}
+          />
+        );
+      })}
+    </>
   );
-
-  for (let i = 0; i < postsInfo.length; i++) {
-    blocks.push(<MainContentPost blockInfo={postsInfo[i]} onClick = {updatePost} />);
-  }
-  return blocks;
 }
 
 const mapStateToProps = (state) => {
-  return {postsInfo: JSON.parse(state.posts.posts)}
-}
+  return { postsInfo: JSON.parse(state.posts.posts) };
+};
 
 export default connect(mapStateToProps, null)(MainContentBlock);

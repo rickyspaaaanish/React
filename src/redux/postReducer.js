@@ -1,7 +1,11 @@
 const initialState = {
-  posts: localStorage.getItem("posts")
-}
+  posts: localStorage.getItem("posts"),
+};
 
 export const postReducer = (state = initialState, action) => {
-  return state;
+  if (action.type == "UPD_POSTS") {
+    return {posts: action.payload};
+  } else {
+    return state;
+  }
 };
