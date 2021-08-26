@@ -29,6 +29,8 @@
 }
 
 .buttons {
+  display: flex;
+  flex-direction: row;
   position: relative;
   margin-left: auto;
 }
@@ -57,6 +59,13 @@
   font-size: 20px;
   height: 32px;
   width: 32px;
+}
+
+.input, .input:focus{
+  border: hidden;
+  outline: none;
+  color: #131313;
+  width: -webkit-fill-available;
 }
 
 .sort {

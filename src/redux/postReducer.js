@@ -3,9 +3,10 @@ const initialState = {
 };
 
 export const postReducer = (state = initialState, action) => {
-  if (action.type == "UPD_POSTS") {
-    return {posts: action.payload};
-  } else {
-    return state;
+  switch (action.type) {
+    case "UPD_POSTS":
+      return { posts: action.payload };
+    default:
+      return state;
   }
 };

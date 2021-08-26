@@ -3,6 +3,7 @@ import styles from "./../styles/MainContent.module.css";
 import classNames from "classnames";
 
 function Form() {
+
   return (
     <>
       <div className={classNames(styles.main, styles.new_post)}>
@@ -16,14 +17,17 @@ function Form() {
         >
           new post
         </div>
-        <div
-          className={classNames(
-            styles.controls__pannel,
-            textstyles.large,
-            textstyles.gray
-          )}
-        >
-          What’s on your mind?
+        <div className={classNames(styles.controls__pannel)}>
+          <input
+            className={classNames(
+              textstyles.large,
+              textstyles.gray,
+              styles.input
+            )}
+            type="text"
+            placeholder="What’s on your mind?"
+            onFocus={(event) => (event.target.placeholder = "")}
+          />
           <div className={styles.buttons}>
             <button
               className={classNames(styles.button, "icon-paperclip")}
@@ -67,5 +71,6 @@ function Form() {
     </>
   );
 }
+
 
 export default Form;
