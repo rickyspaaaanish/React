@@ -12,7 +12,6 @@ function MainContentBlock({ postsInfo }) {
   const updatePost = () => {
     setState(newPostInfo);
     dispatch(updatePosts(JSON.stringify(postsInfo)));
-    localStorage.setItem("posts", JSON.stringify(postsInfo));
   };
 
   return (
